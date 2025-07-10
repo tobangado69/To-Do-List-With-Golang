@@ -155,18 +155,35 @@ func addTask(scanner *bufio.Scanner) {
 	fmt.Println("Task ditambahkan.")
 }
 
-// completeTask meminta user memilih nomor tugas, lalu menandai tugas tersebut sebagai selesai.
 func completeTask(scanner *bufio.Scanner) {
 	showTasks()
 	if len(tasks) == 0 {
 		return
 	}
+
+	// Cek apakah semua task sudah selesai
+	allCompleted := true
+	for _, task := range tasks {
+		if !task.Completed {
+			allCompleted = false
+			break
+		}
+	}
+	if allCompleted {
+		fmt.Println("Task sudah selesai semua.")
+		return
+	}
+
 	fmt.Print("Masukkan nomor task yang selesai: ")
 	scanner.Scan()
 	numStr := scanner.Text()
 	index, err := strconv.Atoi(numStr)
 	if err != nil || index < 1 || index > len(tasks) {
 		fmt.Println("Nomor tidak valid.")
+		return
+	}
+	if tasks[index-1].Completed {
+		fmt.Println("Task ini sudah selesai.")
 		return
 	}
 	tasks[index-1].Completed = true
