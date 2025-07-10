@@ -1,36 +1,36 @@
-# To-Do List With Golang
+# To-Do List Dengan Golang
 
-A simple interactive command-line To-Do List application written in Go. Manage your daily tasks easily from your terminal!
+Aplikasi To-Do List interaktif berbasis command-line yang ditulis dengan Go. Kelola tugas harian Anda dengan mudah langsung dari terminal!
 
-## Features
+## Fitur
 
-- View all tasks (with colored status)
-- Add new tasks
-- Mark tasks as completed
-- Delete tasks
-- Edit task titles
-- Filter and display only incomplete tasks
-- Tasks are automatically saved in the `tasks.json` file
+- Melihat semua task (dengan status berwarna)
+- Menambah task baru
+- Menandai task sebagai selesai
+- Menghapus task
+- Mengedit judul task
+- Menampilkan hanya task yang belum selesai
+- Task otomatis disimpan di file `tasks.json`
 
-## How to Run
+## Cara Menjalankan
 
-1. **Clone this repository**
+1. **Clone repository ini**
   ```bash
-  git clone https://github.com/tobangado69/To-Do-List-With-Golang.git
+  git clone https://github.com/tobangado69/To-Do-List-With-Golang
   cd To-Do-List-With-Golang
   ```
-2. **Build the application**
+2. **Build aplikasi**
   ```bash
   go build -o todo
   ```
-3. **Run the application**
+3. **Jalankan aplikasi**
   ```bash
   ./todo
   ```
 
-## Usage
+## Penggunaan
 
-Run the program and follow the interactive menu:
+Jalankan program dan ikuti menu interaktif:
 
 ```
 ===== To-Do List =====
@@ -44,17 +44,17 @@ Run the program and follow the interactive menu:
 Pilih menu (1-7):
 ```
 
-### Menu Descriptions
+### Penjelasan Menu
 
-- **1. Lihat semua task**: Show all tasks with their status (✅ for completed, ❌ for incomplete). Tasks are sorted so incomplete tasks appear first.
-- **2. Tambah task**: Add a new task by entering its title.
-- **3. Tandai task selesai**: Mark a task as completed by entering its number.
-- **4. Hapus task**: Delete a task by entering its number.
-- **5. Edit task**: Edit the title of an existing task.
-- **6. Tampilkan task yang belum selesai**: Show only tasks that are not yet completed.
-- **7. Keluar**: Exit the application.
+- **1. Lihat semua task**: Menampilkan semua task beserta statusnya (✅ untuk selesai, ❌ untuk belum selesai). Task yang belum selesai akan muncul di atas.
+- **2. Tambah task**: Menambah task baru dengan memasukkan judulnya.
+- **3. Tandai task selesai**: Menandai task sebagai selesai dengan memasukkan nomornya.
+- **4. Hapus task**: Menghapus task dengan memasukkan nomornya.
+- **5. Edit task**: Mengedit judul task yang sudah ada.
+- **6. Tampilkan task yang belum selesai**: Menampilkan hanya task yang belum selesai.
+- **7. Keluar**: Keluar dari aplikasi.
 
-## Example
+## Contoh
 
 ```text
 ===== To-Do List =====
@@ -66,22 +66,22 @@ Pilih menu (1-7):
 6. Tampilkan task yang belum selesai
 7. Keluar
 Pilih menu (1-7): 2
-Masukkan judul task: Buy groceries
+Masukkan judul task: Beli kebutuhan dapur
 Task ditambahkan.
 
 Pilih menu (1-7): 1
-1. [❌] Buy groceries
+1. [❌] Beli kebutuhan dapur
 
 Pilih menu (1-7): 3
 Masukkan nomor task yang selesai: 1
 Task ditandai sebagai selesai.
 
 Pilih menu (1-7): 1
-1. [✅] Buy groceries
+1. [✅] Beli kebutuhan dapur
 
 Pilih menu (1-7): 5
 Masukkan nomor task yang ingin diedit: 1
-Masukkan judul baru: Buy groceries and milk
+Masukkan judul baru: Beli kebutuhan dapur dan susu
 Task berhasil diedit.
 
 Pilih menu (1-7): 6
@@ -95,8 +95,8 @@ Task dihapus.
 
 ---
 
-**Note:**  
-- The application uses colored output for task status (❌ in red, ✅ in green) if your terminal supports ANSI colors.
-- All data is stored locally in `tasks.json` in the same directory as the executable.
-- The menu and prompts are in Indonesian.
-- Requires Go 1.18 or newer.
+**Catatan:**  
+- Aplikasi ini menggunakan warna pada status task (❌ merah, ✅ hijau) jika terminal Anda mendukung ANSI colors.
+- Semua data disimpan secara lokal di `tasks.json` pada direktori yang sama dengan file executable.
+- Menu dan prompt menggunakan bahasa Indonesia.
+- Membutuhkan Go versi 1.18 atau lebih baru.
